@@ -1,0 +1,41 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary text-light text-lg">
+       <%= link_to 'FaceBook', posts_path,class:"navbar-brand logo text-light text-lg"%>
+       <%= link_to 'login', new_session_path,class:"navbar-brand logo text-light text-lg"%>
+      </nav>
+    </header>
+
+    <div class="container">
+       <div class="row">
+         <div class="col-6 text-class">
+         <div class="external-login">
+            <h1 class="regist-header">External Logins</h1>
+            <p class="regist-free">Click to sign in with the following: </p>
+    <div class="signin-links">
+    <%= link_to new_session_path do %>
+        <%= image_tag("facecon.png") %>
+    <% end %>
+    </div>
+  <p class="regist-Heroku">(If you already have a FaceBook account )</p>
+</div>
+  </div>
+         <div class="col-6 form-class">
+         
+          <h1 class="regist-header">Create a New Account</h1>
+         <p class="regist-free">It's free and always will be.</p>
+<br/>
+           <%= render 'form', user: @user %>
+           <p> By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.</p>
+       
+           <%= link_to 'Back', new_session_path, class:"btn btn-primary"%>
+         </div>
+       <div>
+    </div>
+  </body>
+</html>
+
